@@ -1,0 +1,333 @@
+body {
+    background-color: #e7f7f5;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+
+    
+}
+header {
+    color: white;
+    font-family: 'Lilita One';
+    font-size: 1.5em;
+    text-align: center;
+    background-color: #0c9e8d;
+}
+
+header h1 {
+    line-height: 0.8px;
+}
+
+#header-image {
+    height : 30px;
+}
+
+main {
+    display: flex;
+    flex: auto;
+    padding : 0;
+    margin: 0;
+}
+
+footer {
+    background-color: #0c9e8d;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+}
+
+form input {
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+}
+form select{
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: #e7f7f5;
+    padding: 1em;
+    margin: 0;
+    width: 40%;
+
+}
+
+#search-area {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #0c9e8d;
+    padding-bottom: 2em;
+}
+
+#search-area h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#status-legend {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+   font-size: 0.9em;
+   margin-top: 0.5em;
+   background-color: #0c9e8d;
+   border-radius: 10px;
+   border-color: #0c9e8d;
+   color: white;
+   
+}
+
+
+.status-colour {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    
+  }
+
+.not-threatened {
+    background-color: #02a028;
+    color: #02a028;
+}
+
+.naturally-uncommon {
+    background-color: #649a31;
+    color: #649a31;
+}
+
+.relict {
+    background-color: #99cb68;
+    color: #99cb68;
+}
+
+.recovering {
+    background-color: #fecc33;
+    color: #fecc33;
+}
+
+.declining {
+    background-color: #fe9a01;
+    color: #fe9a01;
+}
+
+.nationally-increasing {
+    background-color: #c26967;
+    color: #c26967;
+}
+
+.nationally-vulnerable {
+    background-color: #9b0000;
+    color: #9b0000;
+}
+
+.nationally-endangered {
+    background-color: #660032;
+    color: #660032;
+}
+
+.nationally-critical {
+    background-color: #320033;
+    color: #320033;
+}
+
+.extinct {
+    background-color: black;
+    color: black;
+}
+
+.data-deficient {
+    background-color: black;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+#bird-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusts the number of columns based on the window size */
+  }
+  
+  .bird-card {
+    background-color: rgba(255, 255, 255, 0.927);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .image-box {
+    position: relative;
+    height: 400px;
+    
+  }
+  
+  .bird-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .bird-title {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    padding: 10px;
+    text-shadow: 0 0 10px #000;
+
+  }
+  
+  .status-colour-box {
+    position: absolute;
+    bottom: -1em;
+    right: 10px; 
+    width: 2em;
+    height: 2em;
+    border-radius: 0%;
+    border: 2px solid white;
+    z-index: 3;
+  }
+
+  
+  .bird-details {
+    padding: 10px;
+  }
+  
+  .bird-details dl {
+    margin: 0;
+  }
+  
+  .bird-details dt {
+    font-weight: bold;
+    display: flex;
+    justify-content: left;
+    width: 50%;
+    margin: 0.2em;
+  }
+  
+  .bird-details dd {
+    margin-bottom: 10px;
+    margin-left: 0%;
+    display: flex;
+    justify-content: left;
+    width: 50%;
+    margin: 0.2em;
+  }
+
+  .english-name {
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 0%;
+      margin: 0%;
+      margin-bottom: 0.2em;
+  
+  }
+
+.bird-scientific-name {
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bird-family {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bird-order {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bird-status {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bird-length {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bird-weight {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Threatened {
+    background-color: #02a028;
+    color: #02a028;
+  }
+  
+  .Uncommon {
+    background-color: #649a31;
+    color: #649a31;
+  }
+  
+  .Relict {
+    background-color: #99cb68;
+    color: #99cb68;
+  }
+  
+  .Recovering {
+    background-color: #fecc33;
+    color: #fecc33;
+  }
+  
+  .Declining {
+    background-color: #fe9a01;
+    color: #fe9a01;
+  }
+  
+  .Increasing {
+    background-color: #c26967;
+    color: #c26967;
+  }
+  
+  .Vulnerable {
+    background-color: #9b0000;
+    color: #9b0000;
+  }
+  
+  .Endangered {
+    background-color: #660032;
+    color: #660032;
+  }
+  
+  .Critical {
+    background-color: #320033;
+    color: #320033;
+  }
+  
+  .Extinct {
+    background-color: black;
+    color: black;
+  }
+  
+  .Deficient {
+    background-color: black;
+    color: black;
+  }

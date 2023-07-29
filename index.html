@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="New Zealand Birds">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="kiwi-small.png">
+    <script defer src="myscript.js"></script>
+    <title> Birds of Aotearoa </title>
+</head>
+
+<body>
+    <header>
+        <h1><img id="header-image" src="kiwi.png" alt="Kiwi"> Birds of Aotearoa </h1>
+    </header>
+    <main>
+        <section class="side-bar">
+            <form id="filter">
+                <div id="search-area">
+                    <h2> Filter Birds </h2>
+                    <label for="search"> Search </label>
+                    <input type="text" id="search" placeholder="Search">
+                    <label> Conservation Status </label>
+                    <select id="status">
+                        <option value="all"> All </option>
+                        <option value="not-threatened"> Not Threatened </option>
+                        <option value="naturally-uncommon"> Naturally Uncommon </option>
+                        <option value="relict"> Relict </option>
+                        <option value="recovering"> Recovering </option>
+                        <option value="declining"> Declining </option>
+                        <option value="nationally-increasing"> Nationally Increasing </option>
+                        <option value="nationally-vulnerable"> Nationally Vulnerable </option>
+                        <option value="nationally-endangered"> Nationally Endangered </option>
+                        <option value="nationally-critical"> Nationally Critical </option>
+                        <option value="extinct"> Extinct </option>
+                        <option value="data-deficient"> Data Deficient </option>
+                    </select>
+                    <label> Sort by </label>
+                    <select id="sort">
+                        <option value="none"> None </option>
+                        <option value="alphabetical"> Alphabetical </option>
+                    </select>
+                    <button id="filter-button"> Filter Results </button>
+                </div>
+            </form>
+
+            <div id="status-legend">
+                <h2> Conservation Status</h2>
+                <ul>
+                    <li>
+                        <span class="status-colour not-threatened"></span>
+                        <span class="status-key"> Not Threatened </span>
+                    </li>
+                    <li>
+                        <span class="status-colour naturally-uncommon"></span>
+                        <span class="status-key"> Naturally Uncommon </span>
+                    </li>
+                    <li>
+                        <span class="status-colour relict"></span>
+                        <span class="status-key"> Relict </span>
+                    </li>
+                    <li>
+                        <span class="status-colour recovering"></span>
+                        <span class="status-key"> Recovering </span>
+                    </li>
+                    <li>
+                        <span class="status-colour declining"></span>
+                        <span class="status-key"> Declining </span>
+                    </li>
+                    <li>
+                        <span class="status-colour nationally-increasing"></span>
+                        <span class="status-key"> Nationally Increasing </span>
+                    </li>
+                    <li>
+                        <span class="status-colour nationally-vulnerable"></span>
+                        <span class="status-key"> Nationally Vulnerable </span>
+                    </li>
+                    <li>
+                        <span class="status-colour nationally-endangered"></span>
+                        <span class="status-key"> Nationally Endangered </span>
+                    </li>
+                    <li>
+                        <span class="status-colour nationally-critical"></span>
+                        <span class="status-key"> Nationally Critical </span>
+                    </li>
+                    <li>
+                        <span class="status-colour extinct"></span>
+                        <span class="status-key"> Extinct </span>
+                    </li>
+                    <li>
+                        <span class="status-colour data-deficient"></span>
+                        <span class="status-key"> Data Deficient </span>
+                    </li>
+                </ul>
+                <p>Conservation status from <a href="https://www.doc.govt.nz/nature/conservation-status/">DOC
+                        website</a></p>
+            </div>
+        </section>
+        <div id="bird-cards"></div>
+    </main>
+    <footer>
+        <p> Data licensed from <a href="https://www.birdsnz.org.nz/"> Birds New Zealand </a> for educational use within
+            the University of Otago. </p>
+    </footer>
+</body>
+
+</html>
