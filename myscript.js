@@ -74,7 +74,7 @@ sort_filter = document.getElementById("sort");
 filter_button.addEventListener("click", function (event) {
   event.preventDefault();
   for (const bird_card of bird_array) {
-    const search_text_equal = Object.values(bird_card).some((value) => value.toString().normalize().toLowerCase().includes(search_text.value.normalize().toLowerCase()));
+    const search_text_equal = Object.values(bird_card).some((value) => value.toString().normalize("NFC").toLowerCase().includes(search_text.value.normalize("NFC").toLowerCase()));
     const status_equal = status_filter.value === "all" || bird_card.status.toLowerCase().includes(status_filter.value);
     bird_card.element.classList.toggle("hide", !search_text_equal || !status_equal);
   }
@@ -108,4 +108,20 @@ toggleButton.addEventListener('click', function() {
 if (localStorage.getItem('dark-mode') === 'true') {
   document.body.classList.add('dark-mode');
 }
+
+document.getElementById('reset-filter').addEventListener('click', function(event) {
+  event.preventDefault();
+  document.getElementById('search').value = '';
+  document.getElementById('status').value = 'all';
+  document.getElementById('sort').value = 'none';
+  filter_button.click();
+
+});
+
+document.getElementById('search').addEventListener('keydown', function(event) {
+  if (event.keyCode === 13) {
+      event.preventDefault();
+      filter_button.click();
+  }
+});
 
