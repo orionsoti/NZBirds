@@ -16,6 +16,7 @@ header {
     font-size: 1.5em;
     text-align: center;
     background-color: #0c9e8d;
+    
 }
 
 header h1 {
@@ -55,12 +56,11 @@ h2 {
 
 .side-bar {
     display: flex;
+    flex: 0 0 200px;
     flex-direction: column;
     background-color: #e7f7f5;
     padding: 1em;
     margin: 0;
-    width: 40%;
-
 }
 
 #search-area {
@@ -163,7 +163,7 @@ ul {
 
 #bird-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusts the number of columns based on the window size */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjusts the number of columns based on the window size */
   }
   
   .bird-card {
@@ -343,7 +343,7 @@ ul {
     width: 2em;
     height: 2em;
     cursor: pointer;
-    border: 1px solid #0c9e8d;
+    border: 2px solid white;
     border-radius: 5px;
     opacity: 1;
     transition: opacity 0.3s;
@@ -356,3 +356,12 @@ ul {
     pointer-events: none;
   }
   
+  .hide {
+    display: none;
+  }
+  
+  #results-count {
+    margin-top: 0.5em;
+    font-size: small;
+    text-align: center;
+  }

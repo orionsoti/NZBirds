@@ -54,13 +54,12 @@ function createBirds(data) {
 
 const backToTopButton = document.getElementById('back-to-top');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) { // Show after scrolling down 100 pixels
+  if (window.scrollY > 100) {
     backToTopButton.classList.remove('hidden');
   } else {
     backToTopButton.classList.add('hidden');
   }
 });
-
 backToTopButton.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
@@ -68,3 +67,35 @@ backToTopButton.addEventListener('click', () => {
   });
 });
 
+filter_button = document.getElementById("filter-button");
+search_text = document.getElementById("search");
+status_filter = document.getElementById("status");
+sort_filter = document.getElementById("sort");
+filter_button.addEventListener("click", function (event) {
+  event.preventDefault();
+  for (const bird_card of bird_array) {
+    const search_text_equal = Object.values(bird_card).some((value) => value.toString().normalize().toLowerCase().includes(search_text.value.normalize().toLowerCase()));
+    const status_equal = status_filter.value === "all" || bird_card.status.toLowerCase().includes(status_filter.value);
+    bird_card.element.classList.toggle("hide", !search_text_equal || !status_equal);
+  }
+  switch (sort_filter.value) {
+    case "none":
+      bird_display.append(...[...bird_array].map((element) => element.element));
+      break;
+    case "lightestToHeaviest":
+      bird_display.append(...[...bird_array].sort((a, b) => a.size.weight.value - b.size.weight.value).map((element) => element.element));
+      break;
+    case "heaviestToLightest":
+      bird_display.append(...[...bird_array].sort((a, b) => b.size.weight.value - a.size.weight.value).map((element) => element.element));
+      break;
+    case "longestToShortest":
+      bird_display.append(...[...bird_array].sort((a, b) => b.size.length.value - a.size.length.value).map((element) => element.element));
+      break;
+    case "shortestToLongest":
+      bird_display.append(...[...bird_array].sort((a, b) => a.size.length.value - b.size.length.value).map((element) => element.element));
+      break;
+  }
+  const numberOfResults = bird_array.filter(bird_card => !bird_card.element.classList.contains("hide")).length;
+  document.getElementById("results-count").textContent = `${numberOfResults} result(s) found`;
+}
+);

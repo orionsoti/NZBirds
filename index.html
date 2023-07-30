@@ -25,24 +25,29 @@
                     <label> Conservation Status </label>
                     <select id="status">
                         <option value="all"> All </option>
-                        <option value="not-threatened"> Not Threatened </option>
-                        <option value="naturally-uncommon"> Naturally Uncommon </option>
+                        <option value="not threatened"> Not Threatened </option>
+                        <option value="naturally uncommon"> Naturally Uncommon </option>
                         <option value="relict"> Relict </option>
                         <option value="recovering"> Recovering </option>
                         <option value="declining"> Declining </option>
-                        <option value="nationally-increasing"> Nationally Increasing </option>
-                        <option value="nationally-vulnerable"> Nationally Vulnerable </option>
-                        <option value="nationally-endangered"> Nationally Endangered </option>
-                        <option value="nationally-critical"> Nationally Critical </option>
+                        <option value="nationally increasing"> Nationally Increasing </option>
+                        <option value="nationally vulnerable"> Nationally Vulnerable </option>
+                        <option value="nationally endangered"> Nationally Endangered </option>
+                        <option value="nationally critical"> Nationally Critical </option>
                         <option value="extinct"> Extinct </option>
-                        <option value="data-deficient"> Data Deficient </option>
+                        <option value="data deficient"> Data Deficient </option>
                     </select>
                     <label> Sort by </label>
                     <select id="sort">
                         <option value="none"> None </option>
-                        <option value="alphabetical"> Alphabetical </option>
+                        <option value="lightestToHeaviest"> Lightest to heaviest </option>
+                        <option value="heaviestToLightest"> Heaviest to lightest </option>
+                        <option value="shortestToLongest"> Shortest to longest </option>
+                        <option value="longestToShortest"> Longest to shortest </option>
+
                     </select>
                     <button id="filter-button"> Filter Results </button>
+                    <div id="results-count"></div>
                 </div>
             </form>
 
