@@ -99,3 +99,13 @@ filter_button.addEventListener("click", function (event) {
   document.getElementById("results-count").textContent = `${numberOfResults} result(s) found`;
 }
 );
+
+const toggleButton = document.getElementById('dark-mode-toggle');
+toggleButton.addEventListener('click', function() {
+  const isDarkMode = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('dark-mode', isDarkMode ? 'true' : 'false');
+});
+if (localStorage.getItem('dark-mode') === 'true') {
+  document.body.classList.add('dark-mode');
+}
+
