@@ -61,6 +61,11 @@ h2 {
     background-color: #e7f7f5;
     padding: 1em;
     margin: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+
 }
 
 #search-area {
