@@ -52,7 +52,19 @@ function createBirds(data) {
   }
 }
 
-document.getElementById('toggle-sidebar').addEventListener('click', function() {
-  const sidebar = document.getElementById('sidebar');
-  sidebar.classList.toggle('collapsed');
+const backToTopButton = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) { // Show after scrolling down 100 pixels
+    backToTopButton.classList.remove('hidden');
+  } else {
+    backToTopButton.classList.add('hidden');
+  }
 });
+
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
