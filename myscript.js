@@ -1,9 +1,9 @@
 const bird_data = "data/nzbird.json";
 const bird_display = document.getElementById("bird-cards");
 const bird_array = [];
-fetch(bird_data).then((response) => response.json()).then((data) => createBirds(data)).catch((error) => console.error(error));
+fetch(bird_data).then((response) => response.json()).then((data) => createBirdCards(data)).catch((error) => console.error(error));
 
-function createBirds(data) {
+function createBirdCards(data) {
   for (const bird of data) {
     const status = bird.status.split(" ");
     const birdID = bird.scientific_name.replaceAll(" ", "");
@@ -44,8 +44,7 @@ function createBirds(data) {
       </div>
       </dl>
     </section>
-  </article>
-`;
+  </article>`;
     bird_display.insertAdjacentHTML("beforeend", bird_card);
     bird.element = document.getElementById(`${birdID}`);
     bird_array.push(bird);
@@ -103,10 +102,13 @@ filter_button.addEventListener("click", function (event) {
 const toggleButton = document.getElementById('dark-mode-toggle');
 toggleButton.addEventListener('click', function() {
   const isDarkMode = document.body.classList.toggle('dark-mode');
+  toggleButton.innerHTML = isDarkMode ? '&#x2600;' : '&#x263E;';
   localStorage.setItem('dark-mode', isDarkMode ? 'true' : 'false');
 });
 if (localStorage.getItem('dark-mode') === 'true') {
   document.body.classList.add('dark-mode');
+  toggleButton.innerHTML = '&#x2600;';
+
 }
 
 document.getElementById('reset-filter').addEventListener('click', function(event) {

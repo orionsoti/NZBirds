@@ -14,22 +14,26 @@ header {
     color: white;
     font-family: 'Lilita One';
     font-size: 1.5em;
-    text-align: center;
     background-color: #0c9e8d;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
+  
     
 }
 
 header h1 {
     line-height: 0.8px;
     margin-left: 20px;
+    
 }
 
 #header-image {
     height : 30px;
     margin-left: 20px;
+    
+
 }
 
 main {
@@ -113,6 +117,8 @@ h2 {
     width: 1em;
     height: 1em;
     border-radius: 50%;
+    border: 1px solid white;
+
     
   }
 
@@ -395,7 +401,7 @@ ul {
     font-size: larger;
     cursor: pointer;
     font-weight: bold;
-    margin-right: 20px;
+    margin-right: 30px;
   }
 
   .dark-mode {
@@ -452,3 +458,8 @@ ul {
 #reset-filter:hover {
   background-color: #0a6a60;
 }
+
+.dark-mode .status-colour{
+  border: 1px solid white;
+}
+
