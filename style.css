@@ -26,6 +26,9 @@ header {
 header h1 {
     line-height: 0.8px;
     margin-left: 20px;
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
     
 }
 
@@ -51,7 +54,7 @@ footer {
 }
 
 form input {
-    font-size: 0.8em;
+    font-size: 1em;
     margin-bottom: 0.5em;
 }
 form select{
@@ -187,6 +190,7 @@ ul {
 #bird-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjusts the number of columns based on the window size */
+    width: 100%;
   }
   
   .bird-card {
@@ -363,8 +367,8 @@ ul {
     background-color: #0c9e8d;
     color: white;
     border: none;
-    width: 2em;
-    height: 2em;
+    width: 50px;
+    height: 30px;
     cursor: pointer;
     border: 2px solid white;
     border-radius: 5px;
@@ -372,6 +376,10 @@ ul {
     transition: opacity 0.3s;
     font-size: larger;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   }
   
   .back-to-top.hidden {
@@ -396,12 +404,17 @@ ul {
     margin-top: 0;
     width: 2em;
     height: 2em;
+    min-width: 2em;
+    min-height: 2em;
     border: 2px solid white;
     border-radius: 50px;
     font-size: larger;
     cursor: pointer;
     font-weight: bold;
     margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .dark-mode {
@@ -463,3 +476,20 @@ ul {
   border: 1px solid white;
 }
 
+#darkicon {
+  width: 30px;
+  height: 30px;
+  
+}
+
+#lighticon {
+  width: 30px;
+  height: 30px;
+  
+}
+
+#top {
+  width: 30px;
+  height: 30px;
+
+}

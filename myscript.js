@@ -102,12 +102,12 @@ filter_button.addEventListener("click", function (event) {
 const toggleButton = document.getElementById('dark-mode-toggle');
 toggleButton.addEventListener('click', function() {
   const isDarkMode = document.body.classList.toggle('dark-mode');
-  toggleButton.innerHTML = isDarkMode ? '&#x2600;' : '&#x263E;';
+  toggleButton.innerHTML = isDarkMode ? '<img id="lighticon" src="sun.png"></img>' : '<img id="darkicon" src="moon.png"></img>';
   localStorage.setItem('dark-mode', isDarkMode ? 'true' : 'false');
 });
 if (localStorage.getItem('dark-mode') === 'true') {
   document.body.classList.add('dark-mode');
-  toggleButton.innerHTML = '&#x2600;';
+  toggleButton.innerHTML = '<img id="lighticon" src="sun.png"></img>';
 
 }
 
